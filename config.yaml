@@ -1,0 +1,15 @@
+# Configuración de analisis_elevador.py
+
+archivo: datos.csv # CSV exportado de Capstone / Numbers
+salida: tabla_intervalos_aceleracion.csv
+
+k: 10 # puntos por ventana (10 puntos = 0,05 s a 200 Hz)
+paso: 10 # avance entre ventanas (igual a k = sin traslape)
+n: 10 # número de intervalos de aceleración
+bins: ancho # "ancho" (igual ancho) o "cuantil" (igual nº de ventanas)
+
+masa: 0.450 # kg, medida en balanza (null para omitir N teórica)
+g: 9.79 # m/s²
+
+series: null # p. ej. [2, 3]; null = todas
+invertir_velocidad: false # true si v > 0 significa hacia abajo
